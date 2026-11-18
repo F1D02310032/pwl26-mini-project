@@ -80,5 +80,4 @@ Gambar-gambar tersebut menjadi bukti respons API untuk skenario berhasil maupun 
 Pernyataan: Saya menggunakan AI sebagai alat bantu dan telah memeriksa serta memahami hasilnya. Jika penilaian membutuhkan perubahan, saya akan menyesuaikan kode sendiri.
 
 ## Presentasi
-- Tautan video: `[Isi tautan YouTube Unlisted atau Google Drive]`
-- Repository GitHub: https://github.com/F1D02310032/pwl26-mini-project
+- Tautan video: `[[Isi tautan YouTube Unlisted atau Google Drive](https://drive.google.com/file/d/13XvxvtZKVrTitD3Cr_8p7nEhUrAHtux8/view?usp=sharing)]`
