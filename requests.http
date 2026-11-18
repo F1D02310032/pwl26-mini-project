@@ -1,0 +1,129 @@
+@baseUrl = http://localhost:3000
+
+### Daftar film dengan paginasi
+GET {{baseUrl}}/movies?halaman=1&ukuran=10
+
+### Filter film berdasarkan judul
+GET {{baseUrl}}/movies?halaman=1&ukuran=10&judul=ADITYA
+
+### Detail film
+GET {{baseUrl}}/movies/1
+
+### Detail film tidak ditemukan
+GET {{baseUrl}}/movies/9999
+
+### JSON tidak valid - 400
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{"title":
+
+### Semua genre beserta film
+GET {{baseUrl}}/genres
+
+### Tambah film berhasil
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+  "title": "ADITYA Screening Test",
+  "director": "ADITYA",
+  "releaseYear": 2026,
+  "rating": 8.5,
+  "durationMinutes": 130,
+  "isAvailable": true,
+  "seats": 30,
+  "genreId": 1
+}
+
+### Tambah film - validasi gagal
+POST {{baseUrl}}/movies
+Content-Type: application/json
+
+{
+  "title": "A",
+  "director": "",
+  "releaseYear": 1800,
+  "rating": 99,
+  "durationMinutes": 0,
+  "seats": -1,
+  "genreId": 0
+}
+
+### Update film berhasil
+PUT {{baseUrl}}/movies/1
+Content-Type: application/json
+
+{
+  "title": "Mission ADITYA Updated",
+  "director": "Christopher Nolan",
+  "releaseYear": 2026,
+  "rating": 8.8,
+  "durationMinutes": 145,
+  "isAvailable": true,
+  "seats": 50,
+  "genreId": 1
+}
+
+### Update film tidak ditemukan
+PUT {{baseUrl}}/movies/ 
+Content-Type: application/json
+
+{
+  "title": "Tidak Ditemukan",
+  "director": "ADITYA",
+  "releaseYear": 2026,
+  "rating": 8,
+  "durationMinutes": 120,
+  "isAvailable": true,
+  "seats": 30,
+  "genreId": 1
+}
+
+### Update film konflik judul unik
+PUT {{baseUrl}}/movies/1
+Content-Type: application/json
+
+{
+  "title": "The Life of ADITYA",
+  "director": "Christopher Nolan",
+  "releaseYear": 2026,
+  "rating": 8.8,
+  "durationMinutes": 145,
+  "isAvailable": true,
+  "seats": 50,
+  "genreId": 1
+}
+
+### Transaksi pemesanan berhasil
+POST {{baseUrl}}/screenings
+Content-Type: application/json
+
+{
+  "customerName": "ADITYA - F1D02310032",
+  "ticketCount": 2,
+  "totalPrice": 70000,
+  "screeningDate": "2026-11-20T19:30:00.000Z",
+  "movieId": 1
+}
+
+### Transaksi gagal: kursi kurang
+POST {{baseUrl}}/screenings
+Content-Type: application/json
+
+{
+  "customerName": "ADITYA - F1D02310032",
+  "ticketCount": 20,
+  "totalPrice": 100000,
+  "screeningDate": "2026-11-20T19:30:00.000Z",
+  "movieId": 1
+}
+
+### Hapus film berhasil
+DELETE {{baseUrl}}/movies/4
+
+### Hapus film tidak ditemukan
+DELETE {{baseUrl}}/movies/9999
+
+### Rute tidak ditemukan
+GET {{baseUrl}}/tidak-ada

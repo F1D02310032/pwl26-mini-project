@@ -1,0 +1,11 @@
+$kind: http-request
+name: http://localhost:3000/
+description: 'Generated from cURL: curl -X GET "http://localhost:3000/movies?halaman=1&ukuran=10" -H "Accept: application/json"'
+url: "{{baseUrl}}/movies?halaman=1&ukuran=10"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  halaman: "1"
+  ukuran: "10"
+order: 1000
