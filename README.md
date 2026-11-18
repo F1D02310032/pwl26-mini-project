@@ -81,4 +81,4 @@ Pernyataan: Saya menggunakan AI sebagai alat bantu dan telah memeriksa serta mem
 
 ## Presentasi
 - Tautan video: `[Isi tautan YouTube Unlisted atau Google Drive]`
-- Repository GitHub: `[Isi tautan repository public pwl26-mini-project]`
+- Repository GitHub: https://github.com/F1D02310032/pwl26-mini-project
